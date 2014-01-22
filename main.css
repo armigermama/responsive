@@ -1,0 +1,74 @@
+/**1. Create a static HTML page based on the contents of this Wikipedia page.
+2. Include the main content in a container that takes up at most 850px.
+3. Add some padding to the container on devices smaller than 850px.
+4. A sidebar that takes up 30% width but becomes no smaller than 320px.
+5. Add a navigation bar that restructures itself into a more mobile-friendly design on smaller devices.
+6. Add a couple fluid-width images, i.e. they adapt to the size of the page.
+7. Add an Image Gallery of Responsive Design examples that degrades into a vertical stack on smaller devices.**/
+
+/* apply a natural box layout model to all elements */
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+ }
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #FFF;
+}
+
+#l-container, #l-navigation {
+	max-width: 850px;
+	margin: 0 auto;
+}
+
+#l-container {
+	background-color: silver;
+}
+
+#l-navigation {
+	background-color: #e67e22;
+}
+
+#navigation-options {
+	list-style-type: none;
+	padding: 10px;
+	text-align: right;
+}
+
+#navigation-options li {
+	color: #FFF;
+	font: 20px;
+	padding: 5px;
+	display: inline;
+}
+
+.l-sidebar {
+	background-color: #3498db;
+}
+
+.l-sidebar {
+	float: left;
+	left: 0;
+	width: 30%;
+}
+
+#l-content {
+	right: 0;
+	margin-left: 30%;
+	padding: 10px;
+}
+
+@media all and (max-width: 850px) {
+	#l-container {
+		padding: 10px;
+	}
+	#l-content {
+		clear: both;
+		margin:10px;
+	}
+	.l-sidebar {
+		min-width: 320px;
+		margin: 0 auto;
+	}
+}
