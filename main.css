@@ -37,10 +37,12 @@ body {
 }
 
 #navigation-options li {
-	color: #FFF;
-	font: 20px;
-	padding: 5px;
 	display: inline;
+}
+#navigation-options li a {
+	color: #FFF;
+	font: 30px;
+	padding: 5px;
 }
 
 .l-sidebar {
@@ -59,6 +61,20 @@ body {
 	padding: 10px;
 }
 
+.scale-image
+{
+	max-width: 40%;
+}
+
+.float-right {
+	float: right;
+	margin: .5em 0 .5em .7em;
+}
+
+.float-left {
+	float: left;
+	margin: .5em .7em .5em 0;
+}
 @media all and (max-width: 850px) {
 	#l-container {
 		padding: 10px;
@@ -67,8 +83,19 @@ body {
 		clear: both;
 		margin:10px;
 	}
-	.l-sidebar {
+	.l-sidebar, #l-navigation {
 		min-width: 320px;
 		margin: 0 auto;
+		float: center;
+	}
+	#navigation-options li a, #img-gallery img {
+		display: block;
+		margin: 0 auto;
+	}
+	#img-gallery img {
+		padding: 20px;
+	}
+	#navigation-options {
+		text-align: center;
 	}
 }
