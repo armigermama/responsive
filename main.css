@@ -75,6 +75,11 @@ body {
 	float: left;
 	margin: .5em .7em .5em 0;
 }
+
+#image-gallery img {
+	padding: 10px;
+}
+
 @media all and (max-width: 850px) {
 	#l-container {
 		padding: 10px;
@@ -88,12 +93,9 @@ body {
 		margin: 0 auto;
 		float: center;
 	}
-	#navigation-options li a, #img-gallery img {
+	#navigation-options li a, #image-gallery img {
 		display: block;
-		margin: 0 auto;
-	}
-	#img-gallery img {
-		padding: 20px;
+		/*margin: 0 auto;*/
 	}
 	#navigation-options {
 		text-align: center;
